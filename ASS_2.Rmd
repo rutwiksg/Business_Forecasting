@@ -1,0 +1,43 @@
+---
+title: "Assignment 2"
+author: "Rutwik Guntoorkar"
+date: "9/18/2022"
+output: html_document
+---
+```
+```{r}
+
+library(readr)
+Typical_Employee_Survey_Data <- read_csv("Typical_Employee_Survey_Data.csv")
+
+```
+
+```{r}
+Survey_Data <- Typical_Employee_Survey_Data
+## Basic Commands - Practice
+View(Survey_Data)
+head(Survey_Data)
+names(Survey_Data)
+ncol(Survey_Data)
+nrow(Survey_Data)
+dim(Survey_Data)
+head(Survey_Data)
+tail(Survey_Data)
+str(Survey_Data)
+class(Survey_Data$Gender)
+Survey_Data$Gender <- as.factor(Survey_Data$Gender)
+class(Survey_Data$Gender)
+str(Survey_Data)
+
+
+Survey_Data$Gender
+table(Survey_Data$Gender)
+table(Survey_Data$Age)
+table(Survey_Data$Age, Survey_Data$Gender)
+
+Survey_Data[Survey_Data$Gender == "1",]
+
+summary(Survey_Data)
+
+```
+
